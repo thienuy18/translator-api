@@ -9,7 +9,7 @@
 `STORE-REQUEST{DE(Hund)->EN(dog)} -> RESPONSE{OK}`\
 `GET-REQUEST{DE(Hund)->EN}	-> RESPONSE{dog}`
 
-*As	a	user	I	want	to	be	able	to	get	a	previous	stored	translation	in	the	opposite	order*
+*As	a	user	I	want	to	be	able	to	get	a	previous	stored	translation	in	the	opposite	order*\
 `STORE-REQUEST{DE(Hund)->EN(dog)} -> RESPONSE{OK}`\
 `GET-REQUEST{EN(dog)->DE}	-> RESPONSE{Hund}`
 
