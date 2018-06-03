@@ -13,7 +13,7 @@
 `STORE-REQUEST{DE(Hund)->EN(dog)} -> RESPONSE{OK}`\
 `GET-REQUEST{EN(dog)->DE}	-> RESPONSE{Hund}`
 
-*As	a	user	I	want	to	get	a	guess	of	a	translation	using	other	translations	if	possible*
+*As	a	user	I	want	to	get	a	guess	of	a	translation	using	other	translations	if	possible*\
 `STORE-REQUEST{DE(Katze)->ES(gato)} -> RESPONSE{OK}`\
 `STORE-REQUEST{ES(gato)->EN(cat)} -> RESPONSE{OK}`\
 `STORE-REQUEST{EN(cat)->FR(chat)} -> RESPONSE{OK}`\
@@ -22,7 +22,7 @@
 
 # Installation guide: #
 Build with: `mvn clean install`\
-Run with: `mvn spring-boot:run`\
+Run with: `mvn spring-boot:run`
 
 ***A web server on port 8080 will start. Start and test the API by using cURL or browser request.\
 Curl tests found under docs package.***
