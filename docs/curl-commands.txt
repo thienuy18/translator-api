@@ -1,0 +1,49 @@
+# UserStory: "Translator"
+
+# Test commands:
+
+# STORE-REQUEST{DE(Hund)->EN(dog)} -> RESPONSE{OK}
+curl -i -H "Content-Type: application/json" -X POST -d '{
+            "fromLanguage": "DE",
+            "fromWord": "Hund",
+            "toLanguage": "EN",
+            "toWord": "dog"
+        }' localhost:8080/translator/add
+
+
+# GET-REQUEST{DE(Hund)->EN} -> RESPONSE{dog}
+curl -i -X GET localhost:8080/translator/search/DE/Hund/EN
+
+# GET-REQUEST{EN(dog)->DE} -> RESPONSE{Hund}
+curl -i -X GET localhost:8080/translator/search/EN/dog/DE
+
+
+# STORE-REQUEST{DE(Hund)->EN(dog)} -> RESPONSE{OK}
+curl -i -H "Content-Type: application/json" -X POST -d '{
+            "fromLanguage": "DE",
+            "fromWord": "Katze",
+            "toLanguage": "ES",
+            "toWord": "gato"
+        }' localhost:8080/translator/add
+
+# STORE-REQUEST{ES(gato)->EN(cat)} -> RESPONSE{OK}
+curl -i -H "Content-Type: application/json" -X POST -d '{
+            "fromLanguage": "ES",
+            "fromWord": "gato",
+            "toLanguage": "EN",
+            "toWord": "cat"
+        }' localhost:8080/translator/add
+
+# STORE-REQUEST{EN(cat)->FR(chat)} -> RESPONSE{OK}
+curl -i -H "Content-Type: application/json" -X POST -d '{
+            "fromLanguage": "EN",
+            "fromWord": "cat",
+            "toLanguage": "FR",
+            "toWord": "chat"
+        }' localhost:8080/translator/add
+
+# GET-REQUEST{DE(Katze)->EN} -> RESPONSE{cat}
+curl -i -X GET localhost:8080/translator/search/DE/Katze/EN
+
+# GET-REQUEST{DE(Katze)->FR} -> RESPONSE{chat}
+curl -i -X GET localhost:8080/translator/search/DE/Katze/FR
