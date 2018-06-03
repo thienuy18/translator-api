@@ -18,7 +18,7 @@
 `STORE-REQUEST{ES(gato)->EN(cat)} -> RESPONSE{OK}`\
 `STORE-REQUEST{EN(cat)->FR(chat)} -> RESPONSE{OK}`\
 `GET-REQUEST{DE(Katze)->EN} -> RESPONSE{cat}`\
-`GET-REQUEST{DE(Katze)->FR} -> RESPONSE{chat}`\
+`GET-REQUEST{DE(Katze)->FR} -> RESPONSE{chat}`
 
 # Installation guide: #
 Build with: `mvn clean install`\
